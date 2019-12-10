@@ -62,7 +62,7 @@ server.post('/add', (req, res) => {
                 .then(newAccount => {
                     console.log(newAccount);
                     if (newAccount.length > 0){
-                        res.status(200).json({message: `Account with id: ${account[0]} created `, newAccount: newAccount[0]});
+                        res.status(201).json({message: `Account with id: ${account[0]} created `, newAccount: newAccount[0]});
                     }
                     else{
                         res.status(404).json({message: `Account with id: ${account} not found `});
